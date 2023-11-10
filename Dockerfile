@@ -5,7 +5,7 @@ RUN groupadd -r -g 1000 user && useradd -r -g user -u 1000 user
 RUN mkdir /.local
 RUN chown -R user:user /.local
 RUN chgrp -R 0 /.local  && \
-chmod -R g=u /.local \
+chmod -R g=u /.local
 RUN apk add --no-cache git
 RUN apk add --no-cache openssh
 RUN git clone https://github.com/ejohnsonw/openshift-2023.git notebooks
