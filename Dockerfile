@@ -7,7 +7,7 @@ RUN chown -R user:user /.local
 RUN chgrp -R 0 /.local  && \
 chmod -R g=u /.local
 RUN git clone https://github.com/ejohnsonw/openshift-2023.git notebooks
-RUN mkdir /opt/app-root/notebooks
+RUN mkdir -p /opt/app-root/notebooks
 COPY notebooks/ /opt/app-root/notebooks
 
 EXPOSE 8888
